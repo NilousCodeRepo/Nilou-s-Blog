@@ -1,0 +1,44 @@
+body{
+    background-color: #356077;
+    font-family: Arial, Helvetica; /*"Iosevka Extended", Monaco, Serif, Sans-serif;*/
+    font-size: 100%;
+    width: auto;
+    margin: 0 auto;
+    padding: 1em;
+    /*border: 2px solid navy;*/
+}
+
+h1{
+    margin: 0;
+    padding: 0.25em;
+    font-size: 200%;
+    color: navy;
+}
+
+p{
+    margin: 0;
+    padding-bottom: 0.5em;
+}
+
+#Tsaji_Image{
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin: 0 1em 1em 1em;
+    padding: 0px;
+    border: 1px solid #aa5a00;
+}
+
+h2{
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+}
+#Contact_links{
+    font-size: 75%;
+    text-align: right;
+}
