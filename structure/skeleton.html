@@ -1,18 +1,20 @@
 <!-- TODO: MAKE SURE W3C STICKER IS VALID -->
 
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
+    <html lang ="en">
+        <head>
         <meta charset="UTF-8">
         <meta name="description" content="Informations about the Author and his work" >
-        <meta name="keywords" content="Curriculim Vitae, Personal Blog, Interest">
+        <meta name="keywords" content="Curriculum Vitae, Personal Blog, Interest">
         <meta name="author" content="Ciupe Tudor Stefan">
         <meta name="author" content="Nilo">
         <meta name="vieport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="icon" type="image/jpeg" href="resources/icon/nilo_profile.jpeg">
-        <link rel="stylesheet" type="text/css" href="resources/normalize.css" hreflang="en">
-        <link rel="stylesheet" type="text/css" href="body.css" hreflang="en">
+        <link rel="icon" type="image/jpeg" href="../resources/icon/nilo_profile.jpeg">
+
+        <link rel="stylesheet" type="text/css" href="../style/normalize.css" hreflang="en">
+        <link rel="stylesheet" type="text/css" href="../style/body.css" hreflang="en">
+<!--        <link rel="stylesheet" type="text/css" href="../style/left_column.css" hreflang="en"> -->
 
         <title>Nilou's Website</title>
 
@@ -31,12 +33,19 @@
                     <h2>This website exists as a learning project and a fancier way to show my CV</h2>
                 </div>
 
-                <aside>
-                    <img id=Tsaji_Image
-                         src="resources/images/tsaji_scaled_720p.png" 
-                         alt="The Grandiose Mage Tsaji choose to not show Himself to you."
-                         width="720" height="1080"
-                    >
+                <!-- needed for the script that will fetch the fragment that is left_column -->
+                <div id="left_column_placeholder"></div>
+                
+                <div>
+                    <aside>
+                        <img id=Tsaji_Image
+                             src="../resources/images/tsaji_scaled_720p.png" 
+                             alt="The Grandiose Mage Tsaji choose to not show Himself to you."
+                             width="720" height="1080"
+                        >
+
+                </div>
+
                 </aside>
 
             </section>
@@ -52,6 +61,16 @@
             </ul>
         </nav>
     </footer>
+<!-- TODO: move this in a separate file inside of script -->
+    <script>
+        fetch("left_column.html") //http request
+        .then(response => response.text())//convert to usable syntax
+        .then(html => {
+                        document.getElementById("left_column_placeholder").innerHTML = html;
+                      } //make the substitution in the placeholder
+             );
+    </script>
+
     </body>
 <!-- what a strange body... -->
 </html>
