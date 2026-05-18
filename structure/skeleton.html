@@ -1,76 +1,69 @@
 <!-- TODO: MAKE SURE W3C STICKER IS VALID -->
 
 <!DOCTYPE html>
-    <html lang ="en">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Informations about the Author and his work" >
-        <meta name="keywords" content="Curriculum Vitae, Personal Blog, Interest">
-        <meta name="author" content="Ciupe Tudor Stefan">
-        <meta name="author" content="Nilo">
-        <meta name="vieport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="icon" type="image/jpeg" href="../resources/icon/nilo_profile.jpeg">
+<html lang ="en">
+    <head>
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="Informations about the Author and his work" >
+    <meta name="keywords" content="Curriculum Vitae, Personal Blog, Interest">
+    <meta name="author" content="Ciupe Tudor Stefan">
+    <meta name="author" content="Nilo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/jpeg" href="../resources/icon/nilo_profile.jpeg">
+    
+    <link rel="stylesheet" type="text/css" href="../style/normalize.css" hreflang="en">
+    <link rel="stylesheet" type="text/css" href="../style/body.css" hreflang="en">
+    <link rel="stylesheet" type="text/css" href="../style/left_column.css" hreflang="en">
 
-        <link rel="stylesheet" type="text/css" href="../style/normalize.css" hreflang="en">
-        <link rel="stylesheet" type="text/css" href="../style/body.css" hreflang="en">
-<!--        <link rel="stylesheet" type="text/css" href="../style/left_column.css" hreflang="en"> -->
-
-        <title>Nilou's Website</title>
+    <link rel="preload" type="text/javascript" href="../script/load_left_column.js" as="script">
+    
+    <script async src="../script/load_left_column.js"></script>
+    <script defer src="../script/reload_on_modify-save.js"></script>
+    
+    <title>Nilou's Website</title>
 
     </head>
 <!-- neck -->
 <!-- shoulders -->
-    <body>
+<body>
 
-        <header>
-            <h1>Nilou's Websiste</h1>
-        </header>
-        
-        <main>
-            <section>
-                <div>
-                    <h2>This website exists as a learning project and a fancier way to show my CV</h2>
-                </div>
+    <header>
+        <h1 id="title_first_page">Nilou's Website</h1>
+    </header>
+    
+    <main>
+        <section>
+            <div>
+                <h2>This website exists as a learning project and a fancier way to show my CV</h2>
+            </div>
 
-                <!-- needed for the script that will fetch the fragment that is left_column -->
-                <div id="left_column_placeholder"></div>
-                
-                <div>
-                    <aside>
-                        <img id=Tsaji_Image
-                             src="../resources/images/tsaji_scaled_720p.png" 
-                             alt="The Grandiose Mage Tsaji choose to not show Himself to you."
-                             width="720" height="1080"
-                        >
+            <!-- needed for the script that will fetch the fragment that is left_column -->
+            <div id="left_column_placeholder"></div>
+<!--           <div>
+                <aside> 
+                    <img id=Tsaji_Image
+                         src="../resources/images/tsaji_scaled_720p.png" 
+                         alt="The Grandiose Mage Tsaji choose to not show Himself to you."
+                         width="720" height="1080"
+                    >
+            </aside> 
+            </div> -->
 
-                </div>
-
-                </aside>
-
-            </section>
-        </main>
-        <!-- Thigths -->
-        <!-- Legs -->
-        <footer>
-        <p><strong>Contact info:</strong></p>
-        <nav>
-            <ul id=Contact_Links>
-                <li><a href="link.lk">prova</a></li>
-                <li><a href="lk">LN</a></li>
-            </ul>
-        </nav>
-    </footer>
-<!-- TODO: move this in a separate file inside of script -->
-    <script>
-        fetch("left_column.html") //http request
-        .then(response => response.text())//convert to usable syntax
-        .then(html => {
-                        document.getElementById("left_column_placeholder").innerHTML = html;
-                      } //make the substitution in the placeholder
-             );
-    </script>
-
-    </body>
+        </section>
+    </main>
+    <!-- Thigths -->
+    <!-- Legs -->
+    <footer>
+    <p><strong>Contact info:</strong></p>
+    <nav>
+        <ul id=Contact_Links>
+            <li><a href="link.lk">prova</a></li>
+            <li><a href="lk">LN</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
 <!-- what a strange body... -->
 </html>
